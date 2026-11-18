@@ -1,4 +1,4 @@
-\# 🛒 Preço Certo — Assistente Inteligente de Compras
+\🛒 Preço Certo — Assistente Inteligente de Compras
 
 
 
@@ -6,7 +6,7 @@ Sistema híbrido de apoio à decisão que recomenda os estabelecimentos mais ade
 
 
 
-\## 🚀 Como Executar (Rápido — Windows)
+\🚀 Como Executar (Rápido — Windows)
 
 
 
@@ -30,7 +30,7 @@ Para testar a aplicação imediatamente sem precisar configurar comandos manualm
 
 
 
-\## 🧠 O que a IA faz?
+\🧠 O que a IA faz?
 
 
 
@@ -52,7 +52,7 @@ O \*\*Preço Certo\*\* combina Machine Learning clássico, regras de negócio e 
 
 
 
-\## 📁 Estrutura do Repositório
+\📁 Estrutura do Repositório
 
 
 
