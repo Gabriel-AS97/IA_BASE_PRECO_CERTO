@@ -138,7 +138,7 @@ def gerar_explicacao_llm(melhor_loja, resumo_itens, peso, veiculo, distancia, cl
             return dados["choices"][0]["message"]["content"], True
     
     except Exception:
-    return texto_fallback, False
+        return texto_fallback, False
 
 # --- REGRAS DE DOMÍNIO ---
 def filtrar_lojas_compativeis(lista_produtos, todas_lojas):
