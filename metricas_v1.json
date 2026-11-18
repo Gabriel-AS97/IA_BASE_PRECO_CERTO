@@ -1,0 +1,12 @@
+{
+    "baseline_dummy": {
+        "acuracia": 0.1136,
+        "f1_score_macro": 0.0204
+    },
+    "ia_random_forest": {
+        "acuracia": 0.1034,
+        "precisao_macro": 0.1013,
+        "recall_macro": 0.102,
+        "f1_score_macro": 0.101
+    }
+}
