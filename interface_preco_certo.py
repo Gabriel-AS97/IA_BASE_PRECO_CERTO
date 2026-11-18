@@ -91,8 +91,15 @@ def gerar_explicacao_llm(melhor_loja, resumo_itens, peso, veiculo, distancia, cl
         f"**Próxima ação:** Confirme o estoque antes de se deslocar ou ajuste o meio de transporte caso o peso exceda a capacidade recomendada."
     )
 
+    # Carrega a chave do arquivo .env local, se existir
+    if os.path.exists(".env"):
+        with open(".env", "r", encoding="utf-8") as f:
+            for linha in f:
+                if linha.strip().startswith("GROQ_API_KEY="):
+                    os.environ["GROQ_API_KEY"] = linha.strip().split("=", 1)[1].strip('"').strip("'")
+
     api_key = os.environ.get("GROQ_API_KEY", "")
-    if not api_key or api_key == "COLE_SUA_CHAVE_gsk_AQUI":
+    if not api_key:
         return texto_fallback, False
 
     try:
@@ -130,9 +137,8 @@ def gerar_explicacao_llm(melhor_loja, resumo_itens, peso, veiculo, distancia, cl
             dados = json.loads(resp.read().decode("utf-8"))
             return dados["choices"][0]["message"]["content"], True
     
-    except Exception as erro_groq:
-        st.caption(f"Debug Groq: {erro_groq}")
-        return texto_fallback, False
+    except Exception:
+    return texto_fallback, False
 
 # --- REGRAS DE DOMÍNIO ---
 def filtrar_lojas_compativeis(lista_produtos, todas_lojas):
